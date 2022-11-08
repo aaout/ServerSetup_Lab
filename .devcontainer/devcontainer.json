@@ -1,0 +1,60 @@
+{
+    "name": "Python 3",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        // Update 'VARIANT' to pick a Python version: 3, 3.6, 3.7, 3.8
+        "args": {
+            "VARIANT": "3"
+        }
+    },
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces,type=bind,consistency=delegated",
+    "workspaceFolder": "/workspaces",
+    "runArgs": [
+        "--shm-size=1g",
+        "--ulimit",
+        "memlock=-1",
+        "--ulimit",
+        "stack=67108864",
+        "--gpus",
+        "all",
+        "--rm",
+        "-it"
+    ],
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "/bin/bash",
+                "overrideName": true,
+                "icon": "terminal-bash",
+                "color": "terminal.ansiGreen"
+            }
+        },
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": false,
+        // "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+        "python.formatting.autopep8Path": "/usr/local/lib/python3.6/dist-packages/autopep8",
+        // "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+        // "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+        // "python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+        // "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+        "python.linting.flake8Path": "/usr/local/lib/python3.6/dist-packages/flake8",
+        // "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+        // "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+        // "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+        // "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+        // use flake8 for linting
+        "python.linting.flake8Enabled": true,
+        "python.linting.lintOnSave": true,
+        "python.formatting.provider": "autopep8",
+        "editor.formatOnSave": true,
+    },
+    "extensions": [
+        // copy Extension ID
+        "ms-python.python",
+        // "ms-python.vscode-pylance",
+        // "ms-vsliveshare.vsliveshare",
+        // "njpwerner.autodocstring"
+    ],
+    // "remoteUser": "vscode"
+}

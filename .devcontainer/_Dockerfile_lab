@@ -1,0 +1,33 @@
+FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu18.04
+
+# timezone setting
+ENV TZ=Asia/Tokyo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        python3-dev \
+        python3-pip \
+        python3-wheel \
+        python3-setuptools \
+        cmake \
+        git \
+        curl \
+        ca-certificates \
+        libjpeg-dev \
+        libpng-dev && \
+        rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
+        libglib2.0-0 libsm6 libxrender1 libxext6
+
+RUN pip3 install --no-cache-dir torch==1.7.1 torchvision==0.8.2 \
+        matplotlib==3.3.4 pandas==0.24.1 Pillow==8.1.1\
+        opencv-python==4.0.0.21 tqdm==4.40.0\
+        tensorflow-gpu tensorboardx torchsummary==1.5.1\
+        scikit-learn flake8 autopep8
+
+RUN pip3 install git+https://github.com/pytorch/ignite.git
+
+COPY ./start.sh /
+ENTRYPOINT ["/start.sh"]

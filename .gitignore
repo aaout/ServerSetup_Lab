@@ -1,0 +1,8 @@
+/data
+/out
+/.git
+/.vscode
+src/AutoEncoder/__pycache__
+/src/AutoEncoder/model/__pycache__
+/src/AutoEncoder/model/trained_param
+src/SegNet/__pycache__
