@@ -170,3 +170,7 @@ echo "PASSWORD" | sudo -S mv /mnt/Backup1/Main /mnt/Backup1/Main1
 ※ 設定後、cronを起動して設定が反映されているかを確認してください。
 
 # devcontainer
+
+TODO: devcontainerについての説明追加
+
+TODO: devcontainer.jsonのアップデート
