@@ -1,0 +1,92 @@
+{
+    "name": "Python 3",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        // Update 'VARIANT' to pick a Python version: 3, 3.6, 3.7, 3.8
+        "args": {
+            "VARIANT": "3"
+        }
+    },
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces,type=bind,consistency=delegated",
+    "workspaceFolder": "/workspaces",
+    "runArgs": [
+        "--shm-size=100g", // increase shared memory
+        "--ulimit",
+        "memlock=-1",
+        "--ulimit",
+        "stack=67108864",
+        "--gpus",
+        "all",
+        "--env",
+        "NVIDIA_DISABLE_REQUIRE=1",
+        "--rm",
+        "-it"
+    ],
+    "settings": {
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "/bin/bash",
+                "overrideName": true,
+                "icon": "terminal-bash",
+                "color": "terminal.ansiGreen"
+            }
+        },
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": false,
+        // Use black for linting
+        "python.linting.flake8Enabled": true,
+        "python.linting.lintOnSave": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "python.linting.flake8Args": [
+            // W191: Indentation contains tabs
+            // E401: Multiple imports on one line
+            // E501: Line to long
+            // F401: Module imported but unused
+            "--ignore=W191, E401, E501, F401"
+        ],
+        // Suggestions setting
+        "editor.snippetSuggestions": "top",
+        "editor.suggest.showKeywords": false,
+        "[python]": {
+            "editor.wordBasedSuggestions": true
+        },
+        "python.languageServer": "Pylance",
+        "python.analysis.completeFunctionParens": true,
+        "python.analysis.extraPaths": [
+            "/usr/local/lib/python3.8/dist-packages"
+        ],
+        "python.autoComplete.extraPaths": [
+            "/usr/local/lib/python3.8/dist-packages"
+        ],
+        // Prettier Tab: 4
+        "prettier.tabWidth": 4,
+        // TODO Tree
+        "todo-tree.general.tags": [
+            "TODO"
+        ],
+        "todo-tree.highlights.defaultHighlight": {
+            "gutterIcon": true
+        },
+        "todo-tree.highlights.customHighlight": {
+            "TODO": {
+                "icon": "checklist",
+                "foreground": "#FFC20F",
+                "iconColour": "#FFC20F"
+            }
+        }
+    },
+    "extensions": [
+        // copy Extension ID
+        "ms-python.python",
+        "eamodio.gitlens", // GitLens
+        "mhutchie.git-graph", // Git graph
+        "oderwat.indent-rainbow", // Indent rainbow
+        "KevinRose.vsc-python-indent", // Python Indent
+        "Gruntfuggly.todo-tree", // Various TODO
+        "njpwerner.autodocstring", // Python Docstring Generator
+        "esbenp.prettier-vscode", // Prettier
+        "christian-kohler.path-intellisense" // Path Intellisense
+    ]
+}
