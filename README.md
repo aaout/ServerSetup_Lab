@@ -126,14 +126,14 @@ https://qiita.com/Reizouko/items/8bee9e02e74565b6c147
 
 ※ gest関係をnoにする
 
-### docker run
+## docker run
 
 `run.sh`にDockerのシェルスクリプトを書きました．実行したフォルダ内と同期した操作が可能になります．つまり，こちらで書き換えた内容がDockerにも同期している．実行だけDockerでできる．
 
 `./run.sh IMAGE_NAME bash`で選択したイメージネームの環境でDockerが起動します．
 こののDockerを動かすときは`./run.sh chainer5 bash`と打ちます．
 
-### Add HDD
+## Add HDD
 
 https://sicklylife.jp/ubuntu/1804/hdd_format.html
 
