@@ -1,8 +1,31 @@
-# ServerSetup_Lab
+# ユーザの追加
 
-研究室にサーバーを導入した際のセットアップ, 環境構築, ユーザー追加マニュアルです.
+ユーザ名の設定
 
-サーバー管理担当者が随時更新していってください.
+```sh
+sudo adduser USERNAME
+sudo pdbedit -a USERNAME
+```
+
+HDD1にディレクトリを作成. 本人以外は見られない権限に設定(chown&chmod)．
+
+```
+sudo mkdir USERNAME
+sudo chown USERNAME:USERNAME USERNAME
+sudo chmod 700 USERNAME
+```
+
+user追加後に対象ユーザの.bashrcに`cd /mnt/HDD1/USERNAME`を追加
+
+smb.confを書き換える．
+
+Dockerの権限をユーザに与える
+
+```sh
+sudo gpasswd -a ユーザ名 docker
+```
+
+# サーバーセットアップ
 
 # 引き継ぎの手順
 1. サーバの移動と設置
@@ -36,6 +59,15 @@ READMEの共有を忘れないように
 - ssh設定
 
     https://qiita.com/naoyukisugi/items/3602c41f143c08fadb1a
+
+    sambaとの共存のために以下のコマンドを実行してください
+
+    ```sh
+    ufw allow 22
+    ufw allow Samba
+    ufw app list
+    ufw reload
+    ```
 
 # ソフトウェアインストール
 
@@ -94,46 +126,6 @@ https://qiita.com/Reizouko/items/8bee9e02e74565b6c147
 
 `./run.sh IMAGE_NAME bash`で選択したイメージネームの環境でDockerが起動します．
 こののDockerを動かすときは`./run.sh chainer5 bash`と打ちます．
-
-# serverを立てるに当たって
-
-## ssh接続
-
-https://qiita.com/v97ug/items/eca44cf160b65570e423
-
-sshを使いますが，sambaとの共存のために（ファイアーウォール）次のコマンドを実行してください.
-
-```sh
-ufw allow Samba
-ufw app list
-```
-
-## ユーザの追加
-
-ユーザ名の設定
-
-```sh
-sudo adduser USERNAME
-sudo pdbedit -a USERNAME
-```
-
-HDD1にディレクトリを作成. 本人以外は見られない権限に設定(chown&chmod)．
-
-```
-sudo mkdir USERNAME
-sudo chown USERNAME:USERNAME USERNAME
-sudo chmod 700 USERNAME
-```
-
-user追加後に対象ユーザの.bashrcに`cd /mnt/HDD1/USERNAME`を追加
-
-smb.confを書き換える．
-
-Dockerの権限をユーザに与える
-
-```sh
-sudo gpasswd -a ユーザ名 docker
-```
 
 ## Add HDD
 
