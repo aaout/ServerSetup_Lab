@@ -33,7 +33,7 @@ sudo gpasswd -a ユーザ名 docker
 
 # 2. サーバーセットアップ
 
-# 引き継ぎの手順
+## 引き継ぎの手順
 1. サーバの移動と設置
 2. OSのインストール
 3. それぞれに対するPCの割り当て
@@ -47,7 +47,7 @@ sudo gpasswd -a ユーザ名 docker
     2. 自分のPCで実際にやってもらう
 READMEの共有を忘れないように
 
-# 環境構築
+## 環境構築
 
 - フォルダ名を日本語->英語
 
@@ -75,9 +75,9 @@ READMEの共有を忘れないように
     ufw reload
     ```
 
-# ソフトウェアインストール
+## ソフトウェアインストール
 
-## nvidia-driver
+### nvidia-driver
 
 1. ```apt update```
 
@@ -107,11 +107,11 @@ READMEの共有を忘れないように
     sudo apt install xxx
     ```
 
-## nvidia-docker2
+### nvidia-docker2
 
 https://qiita.com/TaroNakasendo/items/44c3eecb0c1e0a91fdaf
 
-## VSCode
+### VSCode
 
 以下のリンクから.deb package(64-bit)をクリックしてdebファイルをDL.
 
@@ -119,27 +119,27 @@ https://qiita.com/TaroNakasendo/items/44c3eecb0c1e0a91fdaf
 
 https://code.visualstudio.com/docs/setup/linux
 
-## samba
+### samba
 https://qiita.com/Reizouko/items/8bee9e02e74565b6c147
 
 ※ valid users = 自分のuser名
 
 ※ gest関係をnoにする
 
-## docker run
+### docker run
 
 `run.sh`にDockerのシェルスクリプトを書きました．実行したフォルダ内と同期した操作が可能になります．つまり，こちらで書き換えた内容がDockerにも同期している．実行だけDockerでできる．
 
 `./run.sh IMAGE_NAME bash`で選択したイメージネームの環境でDockerが起動します．
 こののDockerを動かすときは`./run.sh chainer5 bash`と打ちます．
 
-## Add HDD
+### Add HDD
 
 https://sicklylife.jp/ubuntu/1804/hdd_format.html
 
 ※ chmodでmntの権限を変えること
 
-## CUI CPU application
+### CUI CPU application
 
 ```sh
 sudo apt intall npm
@@ -167,7 +167,7 @@ echo "PASSWORD" | sudo -S mv /mnt/Backup1/Main /mnt/Backup1/Main1
 
 ※ 設定後、cronを起動して設定が反映されているかを確認してください。
 
-# devcontainer
+## devcontainer
 
 TODO: devcontainerについての説明追加
 
