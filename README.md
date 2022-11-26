@@ -4,6 +4,8 @@
 
 最終更新日: 2022/11/25 伊藤
 
+![ServerSetup_summary](/ServerSetup_summary.png)
+
 # 1. ユーザの追加
 
 ユーザ名の設定
