@@ -82,6 +82,7 @@
         "ms-python.python",
         "eamodio.gitlens", // GitLens
         "mhutchie.git-graph", // Git graph
+        "GitHub.vscode-pull-request-github", // GitHub Pull Request
         "oderwat.indent-rainbow", // Indent rainbow
         "KevinRose.vsc-python-indent", // Python Indent
         "Gruntfuggly.todo-tree", // Various TODO
