@@ -42,6 +42,3 @@ RUN pip3 install --no-cache-dir \
         fastprogress \
         flake8 \
         black
-
-COPY ./start.sh /
-ENTRYPOINT ["/start.sh"]
