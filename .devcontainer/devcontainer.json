@@ -61,21 +61,7 @@
             "/usr/local/lib/python3.8/dist-packages"
         ],
         // Prettier Tab: 4
-        "prettier.tabWidth": 4,
-        // TODO Tree
-        "todo-tree.general.tags": [
-            "TODO"
-        ],
-        "todo-tree.highlights.defaultHighlight": {
-            "gutterIcon": true
-        },
-        "todo-tree.highlights.customHighlight": {
-            "TODO": {
-                "icon": "checklist",
-                "foreground": "#FFC20F",
-                "iconColour": "#FFC20F"
-            }
-        }
+        "prettier.tabWidth": 4
     },
     "extensions": [
         // copy Extension ID
@@ -85,7 +71,7 @@
         "GitHub.vscode-pull-request-github", // GitHub Pull Request
         "oderwat.indent-rainbow", // Indent rainbow
         "KevinRose.vsc-python-indent", // Python Indent
-        "Gruntfuggly.todo-tree", // Various TODO
+        "aaron-bond.better-comments", // Better Comments
         "njpwerner.autodocstring", // Python Docstring Generator
         "esbenp.prettier-vscode", // Prettier
         "christian-kohler.path-intellisense" // Path Intellisense
