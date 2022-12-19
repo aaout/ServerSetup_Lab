@@ -61,7 +61,8 @@
             "/usr/local/lib/python3.8/dist-packages"
         ],
         // Prettier Tab: 4
-        "prettier.tabWidth": 4
+        "prettier.tabWidth": 4,
+        "editor.stickyScroll.enabled": true
     },
     "extensions": [
         // copy Extension ID
