@@ -44,7 +44,7 @@
             // E401: Multiple imports on one line
             // E501: Line to long
             // F401: Module imported but unused
-            "--ignore=W191, E401, E501, F401"
+            "--ignore=W191, E203, E401, E501, F401"
         ],
         // Suggestions setting
         "editor.snippetSuggestions": "top",
@@ -62,7 +62,13 @@
         ],
         // Prettier Tab: 4
         "prettier.tabWidth": 4,
-        "editor.stickyScroll.enabled": true
+        "editor.stickyScroll.enabled": true,
+        // ColorBar setting
+        "workbench.colorCustomizations": {
+            "statusBar.background": "#d20e1e",
+            "statusBar.noFolderBackground": "#d20e1e",
+            "statusBar.debuggingBackground": "#d20e1e"
+        }
     },
     "extensions": [
         // copy Extension ID
@@ -72,7 +78,6 @@
         "GitHub.vscode-pull-request-github", // GitHub Pull Request
         "oderwat.indent-rainbow", // Indent rainbow
         "KevinRose.vsc-python-indent", // Python Indent
-        "aaron-bond.better-comments", // Better Comments
         "njpwerner.autodocstring", // Python Docstring Generator
         "esbenp.prettier-vscode", // Prettier
         "christian-kohler.path-intellisense" // Path Intellisense
