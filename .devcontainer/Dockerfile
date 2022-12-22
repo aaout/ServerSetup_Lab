@@ -1,5 +1,4 @@
-# Dockerfile latest pytorch version
-FROM pytorch/pytorch:latest
+FROM pytorch/pytorch:1.13.1-cuda11.6-cudnn8-devel
 
 # timezone setting
 ENV TZ=Asia/Tokyo
@@ -38,6 +37,7 @@ RUN pip3 install --no-cache-dir \
         openpyxl \
         tensorflow \
         torchsummary \
+        segmentation_models_pytorch \
         ipykernel \
         fastprogress \
         flake8 \
