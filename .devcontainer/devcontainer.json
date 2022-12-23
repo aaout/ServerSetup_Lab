@@ -77,7 +77,6 @@
         "mhutchie.git-graph", // Git graph
         "GitHub.vscode-pull-request-github", // GitHub Pull Request
         "oderwat.indent-rainbow", // Indent rainbow
-        "KevinRose.vsc-python-indent", // Python Indent
         "njpwerner.autodocstring", // Python Docstring Generator
         "esbenp.prettier-vscode", // Prettier
         "christian-kohler.path-intellisense" // Path Intellisense
