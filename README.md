@@ -68,15 +68,6 @@ READMEの共有を忘れないように
 
     https://qiita.com/naoyukisugi/items/3602c41f143c08fadb1a
 
-    sambaとの共存のために以下のコマンドを実行してください
-
-    ```sh
-    ufw allow 22
-    ufw allow Samba
-    ufw app list
-    ufw reload
-    ```
-
 ## ソフトウェアインストール
 
 ### nvidia-driver
@@ -123,6 +114,15 @@ https://code.visualstudio.com/docs/setup/linux
 
 ### samba
 https://qiita.com/Reizouko/items/8bee9e02e74565b6c147
+
+ファイアウォールとの共存のために以下のコマンドを実行してください
+
+```sh
+ufw allow 22
+ufw allow Samba
+ufw app list
+ufw reload
+```
 
 ※ valid users = 自分のuser名
 
