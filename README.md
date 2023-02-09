@@ -79,9 +79,11 @@ READMEの共有を忘れないように
     ```sudo gedit /etc/default/grub```
 
     > GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-    > -> GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pci=nomsi nomodeset"
+    >
+    >  -> GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pci=nomsi nomodeset"
     > 
     > GRUB_CMDLINE_LINUX=""
+    > 
     > -> GRUB_CMDLINE_LINUX="pci=noaer"
 
 3. 以下のコマンドを実行
