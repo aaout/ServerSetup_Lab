@@ -74,13 +74,15 @@ READMEの共有を忘れないように
 
 1. ```apt update```
 
-2. /etc/default/grubの書き換え
+2. 以下のコマンドで設定ファイル開き、"GRUB_CMDLINE_LINUX_DEFAULT"と"GRUB_CMDLINE_LINUX"の項目を書き換える.
 
-    エディタを開き、以下の2項目を変更する
+    ```sudo gedit /etc/default/grub```
 
-    > GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" -> "quiet splash pci=nomsi nomodeset"
+    > GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+    > -> GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pci=nomsi nomodeset"
     > 
-    > GRUB_CMDLINE_LINUX="" -> "pci=noaer"
+    > GRUB_CMDLINE_LINUX=""
+    > -> GRUB_CMDLINE_LINUX="pci=noaer"
 
 3. 以下のコマンドを実行
 
@@ -118,22 +120,15 @@ https://qiita.com/Reizouko/items/8bee9e02e74565b6c147
 ファイアウォールとの共存のために以下のコマンドを実行してください
 
 ```sh
-ufw allow 22
-ufw allow Samba
-ufw app list
-ufw reload
+sudo ufw allow 22
+sudo ufw allow Samba
+sudo ufw app list
+sudo ufw reload
 ```
 
 ※ valid users = 自分のuser名
 
 ※ gest関係をnoにする
-
-## docker run
-
-`run.sh`にDockerのシェルスクリプトを書きました．実行したフォルダ内と同期した操作が可能になります．つまり，こちらで書き換えた内容がDockerにも同期している．実行だけDockerでできる．
-
-`./run.sh IMAGE_NAME bash`で選択したイメージネームの環境でDockerが起動します．
-こののDockerを動かすときは`./run.sh chainer5 bash`と打ちます．
 
 ## Add HDD
 
