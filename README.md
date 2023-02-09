@@ -72,19 +72,16 @@ READMEの共有を忘れないように
 
 ### nvidia-driver
 
-1. ```apt update```
-
 2. 以下のコマンドで設定ファイル開き、"GRUB_CMDLINE_LINUX_DEFAULT"と"GRUB_CMDLINE_LINUX"の項目を書き換える.
 
-    ```sudo gedit /etc/default/grub```
+    ```sh
+    apt update
+    sudo gedit /etc/default/grub
+    ```
 
-    > GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-    >
-    >  -> GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pci=nomsi nomodeset"
+    > GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" -> GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pci=nomsi nomodeset"
     > 
-    > GRUB_CMDLINE_LINUX=""
-    > 
-    > -> GRUB_CMDLINE_LINUX="pci=noaer"
+    > GRUB_CMDLINE_LINUX="" -> GRUB_CMDLINE_LINUX="pci=noaer"
 
 3. 以下のコマンドを実行
 
