@@ -1,139 +1,39 @@
 {
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "vsicons.dontShowNewVersionMessage": true,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "editor.suggestSelection": "first",
-    "update.showReleaseNotes": false,
-    "terminal.integrated.commandsToSkipShell": [
-        "psl.stepIn",
-        "psl.stepOut",
-        "psl.stepOver",
-        "psl.sendToHostTerminal"
-    ],
-    "python.formatting.autopep8Args": [
-        "--line-length=99",
-        "--indent-size=4",
-        "--ignore",
-        "E402"
-    ],
-    "python.formatting.blackArgs": [
-        "--line-length=99",
-        "--indent-size=4",
-        "--ignore",
-        "E402"
-    ],
-    "[python]": {
-        // "editor.codeActionsOnSave": {
-        //     "source.organizeImports": true
-        // }
-    },
-    "git.enableSmartCommit": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "diffEditor.ignoreTrimWhitespace": true,
-    "git.autofetch": true,
-    "files.autoSave": "off",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "breadcrumbs.enabled": true,
-    "python.languageServer": "Jedi",
-    "files.eol": "\n",
-    "editor.tabCompletion": "on",
-    "editor.wordWrap": "on",
-    "jupyter.askForKernelRestart": false,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
-    },
-    "git.confirmSync": false,
-    "[tex]": {
-        // スニペット補完中にも補完を使えるようにする
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
-        // インデント幅を2にする
-        "editor.tabSize": 2
-    },
-    "[latex]": {
-        // スニペット補完中にも補完を使えるようにする
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
-        // インデント幅を2にする
-        "editor.tabSize": 2
-    },
-    "[bibtex]": {
-        // インデント幅を2にする
-        "editor.tabSize": 2
-    },
-    // ---------- LaTeX Workshop ----------
-    // 使用パッケージのコマンドや環境の補完を有効にする
-    "latex-workshop.intellisense.package.enabled": true,
-    // 生成ファイルを削除するときに対象とするファイル
-    // デフォルト値に "*.synctex.gz" を追加
-    "latex-workshop.latex.clean.fileTypes": [
-        "*.aux",
-        "*.bbl",
-        "*.blg",
-        "*.idx",
-        "*.ind",
-        "*.lof",
-        "*.lot",
-        "*.out",
-        "*.toc",
-        "*.acn",
-        "*.acr",
-        "*.alg",
-        "*.glg",
-        "*.glo",
-        "*.gls",
-        "*.ist",
-        "*.fls",
-        "*.log",
-        "*.fdb_latexmk",
-        "*.snm",
-        "*.nav",
-        "*.dvi",
-        "*.synctex.gz"
-    ],
-    // 生成ファイルを "out" ディレクトリに吐き出す
-    "latex-workshop.latex.outDir": "out",
-    // ビルドのレシピ
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "latexmk",
-            "tools": ["latexmk"]
-        }
-    ],
-    // ビルドのレシピに使われるパーツ
-    "latex-workshop.latex.tools": [
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": ["-silent", "-outdir=%OUTDIR%", "%DOC%"]
-        }
-    ],
-    "remote.SSH.remotePlatform": {
-        "192.168.0.27": "linux",
-        "192.168.0.28": "linux",
-        "192.168.0.29": "linux",
-        "NishiLab": "linux",
-        "NishiLab_main": "linux",
-        "NishiLab_Main": "linux",
-        "Nishilab_Jetson": "linux",
-        "Test_Server": "linux",
-        "Nishilab_Medical": "linux"
-    },
-    "editor.formatOnType": true,
-    "python.analysis.completeFunctionParens": true,
-    "go.toolsManagement.autoUpdate": true,
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
-    "security.workspace.trust.untrustedFiles": "open",
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "window.menuBarVisibility": "compact",
-    "latex-workshop.view.pdf.viewer": "tab",
-    "files.exclude": {
-        "**/.git": false
-    },
-    "python.formatting.provider": "none",
-    "workbench.iconTheme": "vscode-icons",
+	"terminal.integrated.profiles.linux": {
+		"bash": {
+			"path": "/bin/bash",
+			"overrideName": true,
+			"icon": "terminal-bash",
+			"color": "terminal.ansiGreen"
+		}
+	},
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": false,
+	"python.linting.flake8Enabled": true,
+	"python.linting.lintOnSave": true,
+	"python.formatting.provider": "black",
+	"editor.formatOnSave": true,
+	"python.linting.flake8Args": [
+		"--ignore=W191, E203, E401, E501, F401"
+	],
+	"editor.snippetSuggestions": "top",
+	"editor.suggest.showKeywords": false,
+	"[python]": {
+		"editor.wordBasedSuggestions": true
+	},
+	"python.languageServer": "Pylance",
+	"python.analysis.completeFunctionParens": true,
+	"python.analysis.extraPaths": [
+		"/usr/local/lib/python3.8/dist-packages"
+	],
+	"python.autoComplete.extraPaths": [
+		"/usr/local/lib/python3.8/dist-packages"
+	],
+	"prettier.tabWidth": 4,
+	"editor.stickyScroll.enabled": true,
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#4e67c8",
+		"statusBar.noFolderBackground": "#4e67c8",
+		"statusBar.debuggingBackground": "#4e67c8"
+	}
 }
