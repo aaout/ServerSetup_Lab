@@ -2,6 +2,7 @@
 /out
 /.git
 /.vscode
+venv_*
 src/AutoEncoder/__pycache__
 /src/AutoEncoder/model/__pycache__
 /src/AutoEncoder/model/trained_param
