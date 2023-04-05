@@ -14,7 +14,7 @@
 	"python.formatting.provider": "black",
 	"editor.formatOnSave": true,
 	"python.linting.flake8Args": [
-		"--ignore=W191, E203, E401, E501, F401"
+		"--ignore=W191, E203, E401, E501, F401, F841"
 	],
 	"editor.snippetSuggestions": "top",
 	"editor.suggest.showKeywords": false,
