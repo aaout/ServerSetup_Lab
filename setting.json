@@ -31,9 +31,10 @@
 	],
 	"prettier.tabWidth": 4,
 	"editor.stickyScroll.enabled": true,
-	"workbench.colorCustomizations": {
-		"statusBar.background": "#4e67c8",
-		"statusBar.noFolderBackground": "#4e67c8",
-		"statusBar.debuggingBackground": "#4e67c8"
-	}
+        "workbench.colorCustomizations": {
+            "statusBar.background": "#434343",
+            "statusBarItem.remoteBackground": "#4e67c8",
+            "statusBar.noFolderBackground": "#434343",
+            "statusBar.debuggingBackground": "#434343"
+    },
 }
