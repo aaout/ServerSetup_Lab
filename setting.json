@@ -36,5 +36,6 @@
             "statusBarItem.remoteBackground": "#4e67c8",
             "statusBar.noFolderBackground": "#434343",
             "statusBar.debuggingBackground": "#434343"
-    },
+        },
+	"terminal.integrated.cursorBlinking": true
 }
