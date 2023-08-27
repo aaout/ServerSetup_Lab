@@ -37,5 +37,7 @@
             "statusBar.noFolderBackground": "#434343",
             "statusBar.debuggingBackground": "#434343"
         },
-	"terminal.integrated.cursorBlinking": true
+	"terminal.integrated.cursorBlinking": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
 }
